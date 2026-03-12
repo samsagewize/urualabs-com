@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import maxDailyData from "../data/max-daily.json";
+import OfficeSprites from "./OfficeSprites";
 
 const teamMembers = [
   {
@@ -103,6 +105,49 @@ export default function Home() {
             <button className="px-8 py-3 bg-slate-700/50 border border-slate-600 rounded-xl font-bold hover:bg-slate-600/50 transition-colors">
               Learn More
             </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Max's Daily Section 🎵 */}
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="relative group">
+          {/* Glow effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 rounded-2xl blur opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+          
+          <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-500/30">
+            {/* Header with Max's info */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="text-4xl">🎵</div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Max's Daily Update</h3>
+                <p className="text-green-400 text-sm">Music Grants Researcher • Working for Sage</p>
+              </div>
+              <div className="ml-auto">
+                <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium border border-green-500/30">
+                  {maxDailyData.date}
+                </span>
+              </div>
+            </div>
+
+            {/* Daily Message */}
+            <div className="mb-6">
+              <p className="text-slate-300 text-lg leading-relaxed italic">
+                "{maxDailyData.message}"
+              </p>
+            </div>
+
+            {/* Daily Goal */}
+            <div className="flex items-center gap-4 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
+              <div className="text-2xl">🎯</div>
+              <div>
+                <p className="text-green-400 text-sm font-medium uppercase tracking-wider">Today's Goal</p>
+                <p className="text-white text-lg font-semibold">{maxDailyData.goal}</p>
+              </div>
+              <div className="ml-auto">
+                <span className="animate-bounce text-2xl">💪</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -264,6 +309,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Animated Office Sprites 🎴🐱🦊🎵 */}
+      <OfficeSprites />
     </div>
   );
 }
