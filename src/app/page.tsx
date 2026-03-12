@@ -3,6 +3,7 @@
 import { useState } from "react";
 import maxDailyData from "../data/max-daily.json";
 import OfficeSprites from "./PokemonOffice";
+import Link from "next/link";
 
 const teamMembers = [
   {
@@ -105,6 +106,9 @@ export default function Home() {
             <button className="px-8 py-3 bg-slate-700/50 border border-slate-600 rounded-xl font-bold hover:bg-slate-600/50 transition-colors">
               Learn More
             </button>
+            <Link href="/team-cards" className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-yellow-500/25">
+              🎴 Team Cards
+            </Link>
           </div>
         </div>
       </div>
