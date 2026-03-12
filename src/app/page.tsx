@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import maxDailyData from "../data/max-daily.json";
-import OfficeSprites from "./OfficeSprites";
+import OfficeSprites from "./PokemonOffice";
 
 const teamMembers = [
   {
